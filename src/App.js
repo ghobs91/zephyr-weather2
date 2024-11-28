@@ -56,14 +56,14 @@ const App = () => {
   }, []);
 
   const getWeatherIcon = (description) => {
-    if (description.toLowerCase().includes("cloud")) {
-      return "./images/cloudy.png";
-    } else if (description.toLowerCase().includes("rain")) {
-      return "./images/rainy.png";
-    } else if (description.toLowerCase().includes("sun")) {
-      return "./images/sunny.png";
+    if (description.toLowerCase().includes('cloud')) {
+      return 'http://openweathermap.org/img/wn/04d@2x.png'; // Cloudy icon
+    } else if (description.toLowerCase().includes('rain')) {
+      return 'http://openweathermap.org/img/wn/09d@2x.png'; // Rainy icon
+    } else if (description.toLowerCase().includes('sun')) {
+      return 'http://openweathermap.org/img/wn/01d@2x.png'; // Sunny icon
     } else {
-      return "./images/unknown.png";
+      return 'http://openweathermap.org/img/wn/50d@2x.png'; // Unknown/mist icon
     }
   };
 
